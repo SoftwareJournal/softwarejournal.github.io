@@ -1,6 +1,9 @@
+#run "docker compose up --watch" in the directory of this file build, start and sync file changes to container
 services:
   web:
+    #build action is specify the location of the dockerfile to build out the web service
     build: .
+    #ports action is specify the host port to open and container port to expose
     ports:
       - "8080:80"
     develop:
